@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+.video{
+	color:white;
+	margin:40px;
+	border:2px solid;
+	text-align:center;
+	background:url("IMAGE/tech.jpg");
+}
+body{background-color:black;
+color:white;
+
+}
+ul {
+ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  heigth:30px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color:red;
+}
+
+.active {
+  background-color:black;
+}
+.bodies{
+padding:35px;}
+</style>
+	<head>
+		<title >Gallery</title>
+
+	</head>
+	
+	<body>
+	<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a class="active" href="Profile.html">Profile</a></li>
+  <li><a class="active" href="Gallery.html">Gallery</a></li>
+  <li><a class="active" href="About.html">About</a></li>
+  <li><a class="active" href="Feedback.html">Feedback</a></li>
+	</ul><br><br>
+	<div class="bodies">
+	<img width=200px; height=200px; style="float:left;" src="IMAGE/icon3.png"></img>
+	<h1 style="font-size:45px;">GALLERY</h1>
+	
+	<div class="video">
+	<h1>MEMORIES ABOUT ME</h1>
+	
+	<div style="text-align:center"> 
+	<button onclick="playPause()">Play/Pause</button> 
+	<button onclick="makeBig()">Big</button>
+	<button onclick="makeSmall()">Small</button>
+	<button onclick="makeNormal()">Normal</button>
+	<br><br>
+	<video id="video1" width="500" height="450">
+		<source src="IMAGE/video.mp4" type="video/mp4">
+  
+		Your browser does not support HTML video.
+	</video><br>
+	<a style="color:red; text-align:center;" href="https://www.youtube.com/watch?v=FQPuGE1JfGY" type="video/mp4"> For full song click here</a><br>
+
+	</div> 
+	<audio controls>
+		<source src="IMAGE/TOP.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	</div>
+	
+	</div>
+	<script> 
+	var myVideo = document.getElementById("video1"); 
+
+	function playPause() { 
+	if (myVideo.paused) 
+		myVideo.play(); 
+	else 
+		myVideo.pause(); 
+	} 
+
+	function makeBig() { 
+		myVideo.width = 740; 
+	} 
+
+	function makeSmall() { 
+		myVideo.width = 360; 
+	} 
+
+	function makeNormal() { 
+		myVideo.width = 480; 
+	} 
+	</script> 
+
+	
+
+	
+	</body>
+</html>
